@@ -17,20 +17,21 @@ A sample GitOps project that uses kustomize to deploy kubernetes resources into 
 │   ├── deployment.yaml
 │   ├── kustomization.yaml
 │   └── service.yaml
-└── envs
+├── envs
 │   ├── non-prod
 │   │   ├── debug.yaml
 │   │   └── kustomization.yaml
 │   └── prod
 │       ├── kustomization.yaml
 │       └── replica_count.yaml
+├── kustomization.yaml
 └── namespace
-│   ├── non-prod
-│   │   ├── namespace.yaml
-│   │   └── kustomization.yaml
-│   └── prod
-│       ├── kustomization.yaml
-│       └── namespace.yaml
+    ├── non-prod
+    │   ├── kustomization.yaml
+    │   └── namespace.yaml
+    └── prod
+        ├── kustomization.yaml
+        └── namespace.yaml
 ```
 
 ## Environments
