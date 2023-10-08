@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: gitops
+  name: gitops
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gitops
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: gitops
+    spec:
+      containers:
+        - image: gitops:1.0
+          name: gitops
+          resources: {}
+          env:
+            - $patch: delete
+              name: DEBUG
+              value: "true"
+status: {}
